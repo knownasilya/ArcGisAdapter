@@ -4,7 +4,7 @@ ArcGisAdapter
 Ember Data adapter/serializer for ArcGis Server feature data.
 
 ## Usage
-First is to initialize the adapter..
+To get started we need to initialize the adapter..
 
 ```js
 App.arcGisAdapter = DS.ArcGisAdapter.create({
@@ -36,14 +36,16 @@ App.Provider.reopenClass({
 ```
 
 Where `ServiceName` is the name of the service, and `0` is the layer id.
-In the end you are querying the following url: `http://mydomain.com/ArcGIS/rest/services/Example/ServiceName/MapServer/0/query` and you would use something like this to retreive the data (in your model hook):
+In the end you are querying the following url: `http://mydomain.com/ArcGIS/rest/services/Example/ServiceName/MapServer/0/query` and you would use something like this to retreive the data:
 
 ```js
-return App.Provider.find({ 
-  geometry: lnglat, // a string in the form of '[lng],[lat]'
-  returnGeometry: false,
-  outFields: "*",
-  inSR: 4326,
-  f: "json"
-});
+model: function (params) {
+  return App.Provider.find({ 
+    geometry: params.lnglat, // a string in the form of '[lng],[lat]'
+    returnGeometry: false,
+    outFields: "*",
+    inSR: 4326,
+    f: "json"
+  });
+}
 ```
