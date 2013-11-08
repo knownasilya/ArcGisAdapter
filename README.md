@@ -49,3 +49,13 @@ model: function (params) {
   });
 }
 ```
+
+## Unit Tests
+
+Tests are written with QUnit and run on Karma.  You will need Node.js, Bower and Karma installed to run the tests.
+
+```
+> karma start --single-run
+```
+
+
