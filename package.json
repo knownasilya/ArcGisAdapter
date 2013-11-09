@@ -2,6 +2,9 @@
   "name": "ember-arcgis-adapter",
   "author": "Ilya Radchenko",
   "version": "0.0.1",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
   "dependencies": {},
   "devDependencies": {
     "karma-firefox-launcher": "~0.1.0",
