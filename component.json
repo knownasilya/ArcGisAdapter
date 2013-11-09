@@ -1,0 +1,14 @@
+{
+  "name": "ember-arcgis-adapter",
+  "author": "Ilya Radchenko",
+  "main": "arcgis_adapter.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "ember": "~1.1.2",
+    "ember-data": "latest"
+  },
+  "ignore": [
+    "vendor/",
+    "test/"
+  ]
+}
