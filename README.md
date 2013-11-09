@@ -53,9 +53,12 @@ model: function (params) {
 ## Unit Tests
 
 Tests are written with QUnit and run on Karma.  You will need Node.js, Bower and Karma installed to run the tests.
+To run the tests you can use npm:
 
 ```
-> karma start --single-run
+npm test
 ```
+which is equivalent to `karma start --single-run`
+
 
 
